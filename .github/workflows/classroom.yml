@@ -40,8 +40,6 @@ jobs:
         command: ls -l cobertura.png
         timeout: 10
         max-score: 4
-      env:
-        GH_TOKEN: ${{ github.token }}
     - name: T4
       id: t4
       uses: classroom-resources/autograding-command-grader@v1
