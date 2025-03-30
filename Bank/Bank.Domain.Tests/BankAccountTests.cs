@@ -19,5 +19,18 @@ namespace Bank.Domain.Tests
             double actual = account.Balance;
             Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(expected, actual, 0.001, "Account not debited correctly");
         }
+        [Test]
+        public void Credit_ValidAmount_IncreasesBalance()
+        {
+            // Arrange
+            var account = new BankAccount("John Doe", 100.0);
+
+            // Act
+            account.Credit(50.0);
+
+            // Assert
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(150.0, account.Balance);
+        }
+
     }
 }
