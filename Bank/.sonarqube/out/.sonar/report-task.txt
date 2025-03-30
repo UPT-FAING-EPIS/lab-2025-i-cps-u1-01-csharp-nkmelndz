@@ -3,5 +3,5 @@ projectKey=si784_apibank
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.61173
 dashboardUrl=https://sonarcloud.io/dashboard?id=si784_apibank
-ceTaskId=AZXlWJVIUfhL_gf1YT5b
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZXlWJVIUfhL_gf1YT5b
+ceTaskId=AZXoBzVZUfhL_gf1YWsS
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZXoBzVZUfhL_gf1YWsS

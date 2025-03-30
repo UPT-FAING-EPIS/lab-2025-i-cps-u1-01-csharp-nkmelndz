@@ -54,48 +54,6 @@
               "resultFile": {
                 "uri": "file:///D:/Users/n/Desktop/lab-2025-i-cps-u1-01-csharp-nkmelndz/Bank/Bank.Domain/Models/BankAccount.cs",
                 "region": {
-                  "startLine": 18,
-                  "startColumn": 55,
-                  "endLine": 18,
-                  "endColumn": 63
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA1507",
-          "level": "note",
-          "message": "Use nameof en lugar del literal de cadena \"amount\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///D:/Users/n/Desktop/lab-2025-i-cps-u1-01-csharp-nkmelndz/Bank/Bank.Domain/Models/BankAccount.cs",
-                "region": {
-                  "startLine": 20,
-                  "startColumn": 55,
-                  "endLine": 20,
-                  "endColumn": 63
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA1507",
-          "level": "note",
-          "message": "Use nameof en lugar del literal de cadena \"amount\"",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///D:/Users/n/Desktop/lab-2025-i-cps-u1-01-csharp-nkmelndz/Bank/Bank.Domain/Models/BankAccount.cs",
-                "region": {
                   "startLine": 26,
                   "startColumn": 55,
                   "endLine": 26,
@@ -143,6 +101,48 @@
             "customProperties": {
               "MethodNameProperty": "ThrowIfNegative"
             }
+          }
+        },
+        {
+          "ruleId": "CA1507",
+          "level": "note",
+          "message": "Use nameof en lugar del literal de cadena \"amount\"",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Users/n/Desktop/lab-2025-i-cps-u1-01-csharp-nkmelndz/Bank/Bank.Domain/Models/BankAccount.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 55,
+                  "endLine": 18,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1507",
+          "level": "note",
+          "message": "Use nameof en lugar del literal de cadena \"amount\"",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Users/n/Desktop/lab-2025-i-cps-u1-01-csharp-nkmelndz/Bank/Bank.Domain/Models/BankAccount.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 55,
+                  "endLine": 20,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
           }
         },
         {

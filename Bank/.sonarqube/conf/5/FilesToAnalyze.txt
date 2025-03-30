@@ -1,4 +1,4 @@
-﻿D:\Users\n\Desktop\lab-2025-i-cps-u1-01-csharp-nkmelndz\Bank\Bank.Domain\Models\BankAccount.cs
+﻿D:\Users\n\Desktop\lab-2025-i-cps-u1-01-csharp-nkmelndz\Bank\Bank.Domain.Tests\BankAccountTests.cs
 C:\Users\n\.nuget\packages\microsoft.net.test.sdk\17.13.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs
 C:\Users\n\.nuget\packages\microsoft.testplatform.testhost\17.13.0\build\netcoreapp3.1\x64\testhost.exe
 C:\Users\n\.nuget\packages\microsoft.testplatform.testhost\17.13.0\build\netcoreapp3.1\x64\testhost.dll
@@ -7,4 +7,9 @@ C:\Users\n\.nuget\packages\nunit3testadapter\5.0.0\build\netcoreapp3.1\nunit.eng
 C:\Users\n\.nuget\packages\nunit3testadapter\5.0.0\build\netcoreapp3.1\nunit.engine.api.dll
 C:\Users\n\.nuget\packages\nunit3testadapter\5.0.0\build\netcoreapp3.1\nunit.engine.core.dll
 C:\Users\n\.nuget\packages\nunit3testadapter\5.0.0\build\netcoreapp3.1\testcentric.engine.metadata.dll
+D:\Users\n\Desktop\lab-2025-i-cps-u1-01-csharp-nkmelndz\Bank\Bank.Domain.Tests\TestResults\03f6e3da-2f08-45ec-a93e-feb628d40be6\coverage.cobertura.xml
+D:\Users\n\Desktop\lab-2025-i-cps-u1-01-csharp-nkmelndz\Bank\Bank.Domain.Tests\TestResults\87f4bf04-26e3-4698-a2b9-a0578315c4c5\coverage.opencover.xml
 C:\Users\n\.nuget\packages\nunit3testadapter\5.0.0\build\netcoreapp3.1\NUnit3.TestAdapter.dll
+C:\Users\n\.nuget\packages\mstest.testadapter\3.1.1\build\net6.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\n\.nuget\packages\mstest.testadapter\3.1.1\build\net6.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\n\.nuget\packages\mstest.testadapter\3.1.1\build\net6.0\Microsoft.TestPlatform.AdapterUtilities.dll
