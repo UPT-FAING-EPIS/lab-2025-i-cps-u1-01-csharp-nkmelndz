@@ -28,6 +28,6 @@ jobs:
         run: |
           dotnet restore Bank
           dotnet test Bank --collect:"XPlat Code Coverage;Format=opencover"
-          dotnet-sonarscanner begin /k:"${{ env.SONAR_PROJECT }}" /o:"${{ env.SONAR_ORG }}" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="Bank/**/coverage.opencover.xml" /d:sonar.qualitygate.wait=true
+          dotnet-sonarscanner begin /k:"${{ env.SONAR_PROJECT }}" /o:"${{ env.SONAR_ORG }}" /d:sonar.login="8b0f497ae0cc019d612fd90a545496ac5faf643d" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="Bank/**/coverage.opencover.xml" /d:sonar.qualitygate.wait=true
           dotnet build Bank
-          dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          dotnet-sonarscanner end /d:sonar.login="8b0f497ae0cc019d612fd90a545496ac5faf643d"
