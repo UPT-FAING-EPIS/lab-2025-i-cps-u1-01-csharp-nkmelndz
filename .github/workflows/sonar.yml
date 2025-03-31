@@ -5,7 +5,8 @@ env:
   SONAR_PROJECT: 'si784_apibank'        # Key ID del proyecto de sonar
 on:
   push:
-    branches: [ "main" ]
+    branches: 
+      - main
   workflow_dispatch:
 
 jobs:
