@@ -4,6 +4,15 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageId>Bank.Domain</PackageId> <!-- Nombre único del paquete -->
+    <Version>1.0.0</Version> <!-- Versión del paquete -->
+    <Authors>nkmelndz</Authors>
+    <Company>TuEmpresa</Company>
+    <Description>Este es el paquete NuGet para la capa de dominio del banco.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-01-csharp-nkmelndz</RepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols> <!-- Incluye símbolos de depuración -->
+    <IncludeSource>true</IncludeSource> <!-- Incluye código fuente -->
   </PropertyGroup>
 
 </Project>
