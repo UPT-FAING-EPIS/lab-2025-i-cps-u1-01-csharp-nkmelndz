@@ -3,7 +3,7 @@ name: Build and Publish NuGet Package
 on:
   push:
     branches:
-      - main
+      - '**'
   workflow_dispatch:
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
         run: dotnet build Bank/Bank.Domain/Bank.Domain.csproj --configuration Release --no-restore
 
       - name: Pack NuGet Package
-        run: dotnet pack Bank.Domain/Bank.Domain.csproj --configuration Release --output ./nupkg
+        run: dotnet pack Bank/Bank.Domain/Bank.Domain.csproj --configuration Release --output ./nupkg
 
       - name: Push NuGet Package to GitHub Packages
         run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/nkmelndz/index.json"
