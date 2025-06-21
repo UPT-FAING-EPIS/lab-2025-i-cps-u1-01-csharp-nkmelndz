@@ -37,8 +37,7 @@ jobs:
       - name: Crear paquete NuGet
         run: |
           VERSION=${{ env.TAG_NAME }}
-          dotnet pack Bank/Bank.Domain/Bank.Domain.csproj -c Release \
-            -p:PackageId=BankDomainnkmelndz -p:Version=$VERSION
+          dotnet pack Bank/Bank.Domain/Bank.Domain.csproj -c Release
 
       - name: Verificar paquete generado
         run: ls -l Bank/Bank.Domain/bin/Release/
