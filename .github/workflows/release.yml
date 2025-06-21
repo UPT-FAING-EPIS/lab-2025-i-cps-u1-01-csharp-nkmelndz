@@ -52,5 +52,6 @@ jobs:
         run: |
           dotnet nuget push Bank/Bank.Domain/bin/Release/*.nupkg \
             --skip-duplicate \
-            --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" \
-            --api-key ${{ secrets.GH_TOKEN }}
+            --source "https://nuget.pkg.github.com/nkmelndz/index.json" \
+            --api-key ${{ secrets.GH_TOKEN }} \
+            --verbosity detailed
