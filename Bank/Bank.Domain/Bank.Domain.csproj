@@ -16,7 +16,6 @@
     <PackageId>BankDomain.nkmelndz</PackageId>
     <RepositoryUrl>https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-01-csharp-nkmelndz</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-01-csharp-nkmelndz</PackageProjectUrl>
   </PropertyGroup>
 
 </Project>
