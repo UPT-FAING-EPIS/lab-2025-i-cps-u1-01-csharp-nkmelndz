@@ -9,16 +9,12 @@
 
     <Authors>nkmelndz</Authors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>
-    1591</NoWarn>
+    <NoWarn>$(NoWarn);1591</NoWarn>
     <PackageDescription>BankDomain</PackageDescription>
     <PackageId>BankDomain.nkmelndz</PackageId>
-    <RepositoryUrl>
-    https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-01-csharp-nkmelndz</RepositoryUrl>
-    <RepositoryType>
-    git</RepositoryType>
-    <PackageProjectUrl>
-    https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-01-csharp-nkmelndz</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-01-csharp-nkmelndz</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-01-csharp-nkmelndz</PackageProjectUrl>
   </PropertyGroup>
 
 </Project>
