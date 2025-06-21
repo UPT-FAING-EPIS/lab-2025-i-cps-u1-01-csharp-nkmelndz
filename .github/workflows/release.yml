@@ -43,15 +43,11 @@ jobs:
       - name: Crear paquete NuGet
         run: |
           dotnet pack Bank/Bank.Domain/Bank.Domain.csproj -c Release \
-            -p:PackageId=BankDomain.nkmelndz 
-
-      - name: Verificar paquete generado
-        run: ls -l Bank/Bank.Domain/bin/Release/
-
+            -p:PackageId=Bank.Domain.U1.Lab01 \
+            -p:PackageVersion=202.207.4262 \
+            -p:RepositoryUrl=https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-01-csharp-nkmelndz \
+            -p:RepositoryType=git \
+            --output ./packages
       - name: Publicar paquete en GitHub Packages
-        run: |
-          dotnet nuget push Bank/Bank.Domain/bin/Release/*.nupkg \
-            --skip-duplicate \
-            --source "https://nuget.pkg.github.com/nkmelndz/index.json" \
-            --api-key ${{ secrets.GH_TOKEN }} \
-            --verbosity detailed
+        run: dotnet nuget push ./packages/*.nupkg --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key ${{ secrets.PACKAGE_NUGET }} --skip-duplicate
+ 
