@@ -8,6 +8,8 @@
     <!-- Información del paquete NuGet -->
 
     <Authors>nkmelndz</Authors>
+    <Description>Dominio del proyecto Bank</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
     <PackageDescription>BankDomain</PackageDescription>

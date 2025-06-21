@@ -1,13 +1,17 @@
-name: Crear Release y Nuget
+name: Crear Release y NuGet
 
 on:
   push:
-     branches: [ "main" ] #ww
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+
     steps:
       - uses: actions/checkout@v4
 
@@ -22,6 +26,8 @@ jobs:
 
       - name: Crear nuevo tag
         run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git tag ${{ env.TAG_NAME }}
           git push origin ${{ env.TAG_NAME }}
 
@@ -31,22 +37,20 @@ jobs:
           tag: ${{ env.TAG_NAME }}
           name: "Release ${{ env.TAG_NAME }}"
           bodyFile: "release_notes.md"
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           replacesArtifacts: true
 
       - name: Crear paquete NuGet
         run: |
-          VERSION=${{ env.TAG_NAME }}
-          dotnet pack Bank/Bank.Domain/Bank.Domain.csproj -c Release
-
+          dotnet pack Bank/Bank.Domain/Bank.Domain.csproj -c Release \
+            -p:PackageId=BankDomain.nkmelndz 
+            
       - name: Verificar paquete generado
         run: ls -l Bank/Bank.Domain/bin/Release/
 
       - name: Publicar paquete en GitHub Packages
         run: |
-          dotnet nuget push Bank/Bank.Domain/bin/Release/BankDomain.nkmelndz.20.2207.4262.nupkg \
+          dotnet nuget push Bank/Bank.Domain/bin/Release/*.nupkg \
             --skip-duplicate \
-            --source "https://nuget.pkg.github.com/UPT-FAING-EPIS/index.json" \
-            --api-key ${{ secrets.GH_TOKEN }}
-
-
+            --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" \
+            --api-key ${{ secrets.GITHUB_TOKEN }}
