@@ -2,17 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+    <Version>20.2207.4262</Version>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>Bank.Domain</PackageId> <!-- Nombre único del paquete -->
-    <Version>1.0.0</Version> <!-- Versión del paquete -->
+    <!-- Información del paquete NuGet -->
+
     <Authors>nkmelndz</Authors>
-    <Company>TuEmpresa</Company>
-    <Description>Este es el paquete NuGet para la capa de dominio del banco.</Description>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-01-csharp-nkmelndz</RepositoryUrl>
-    <IncludeSymbols>true</IncludeSymbols> <!-- Incluye símbolos de depuración -->
-    <IncludeSource>true</IncludeSource> <!-- Incluye código fuente -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>
+    1591</NoWarn>
+    <PackageDescription>BankDomain</PackageDescription>
+    <PackageId>BankDomain.nkmelndz</PackageId>
+    <RepositoryUrl>
+    https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-01-csharp-nkmelndz</RepositoryUrl>
+    <RepositoryType>
+    git</RepositoryType>
+    <PackageProjectUrl>
+    https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-01-csharp-nkmelndz</PackageProjectUrl>
   </PropertyGroup>
 
 </Project>
