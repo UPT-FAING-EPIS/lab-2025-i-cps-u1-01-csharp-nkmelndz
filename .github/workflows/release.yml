@@ -44,7 +44,7 @@ jobs:
 
       - name: Publicar paquete en GitHub Packages
         run: |
-          dotnet nuget push Bank/Bank.Domain/bin/Release/*.nupkg \
+          dotnet nuget push Bank/Bank.Domain/bin/Release/BankDomain.nkmelndz.20.2207.4262.nupkg \
             --skip-duplicate \
             --source "https://nuget.pkg.github.com/UPT-FAING-EPIS/index.json" \
             --api-key ${{ secrets.GH_TOKEN }}
