@@ -7,7 +7,6 @@ on:
 
 jobs:
   release:
-    name: Generar Release en GitHub
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,7 +16,6 @@ jobs:
         run: echo "TAG_NAME=release-$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_ENV
 
       - name: Obtener notas de los commits
-        id: changelog
         run: |
           echo "## Cambios en la versión ${{ env.TAG_NAME }}" > release_notes.md
           git log --pretty=format:"- %s" -n 10 >> release_notes.md
@@ -38,8 +36,18 @@ jobs:
 
       - name: Crear paquete NuGet
         run: |
-          dotnet pack Bank/Bank.Domain/Bank.Domain.csproj -c Release
+          VERSION=${{ env.TAG_NAME }}
+          dotnet pack Bank/Bank.Domain/Bank.Domain.csproj -c Release \
+            -p:PackageId=BankDomainnkmelndz -p:Version=$VERSION
+
+      - name: Verificar paquete generado
+        run: ls -l Bank/Bank.Domain/bin/Release/
+
       - name: Publicar paquete en GitHub Packages
         run: |
-          dotnet nuget push Bank/Bank.Domain/bin/Release/BankDomainnkmelndz.20.2207.4262.nupkg --skip-duplicate --source "https://nuget.pkg.github.com/UPT-FAING-EPIS/index.json" --api-key ${{secrets.GH_TOKEN}}
+          dotnet nuget push Bank/Bank.Domain/bin/Release/*.nupkg \
+            --skip-duplicate \
+            --source "https://nuget.pkg.github.com/UPT-FAING-EPIS/index.json" \
+            --api-key ${{ secrets.GH_TOKEN }}
+
 
