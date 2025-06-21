@@ -37,14 +37,14 @@ jobs:
           tag: ${{ env.TAG_NAME }}
           name: "Release ${{ env.TAG_NAME }}"
           bodyFile: "release_notes.md"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           replacesArtifacts: true
 
       - name: Crear paquete NuGet
         run: |
           dotnet pack Bank/Bank.Domain/Bank.Domain.csproj -c Release \
             -p:PackageId=BankDomain.nkmelndz 
-            
+
       - name: Verificar paquete generado
         run: ls -l Bank/Bank.Domain/bin/Release/
 
@@ -53,4 +53,4 @@ jobs:
           dotnet nuget push Bank/Bank.Domain/bin/Release/*.nupkg \
             --skip-duplicate \
             --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" \
-            --api-key ${{ secrets.GITHUB_TOKEN }}
+            --api-key ${{ secrets.GH_TOKEN }}
