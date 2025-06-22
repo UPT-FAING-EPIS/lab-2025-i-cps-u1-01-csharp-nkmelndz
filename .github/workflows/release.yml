@@ -42,11 +42,11 @@ jobs:
 
       - name: Pack NuGet package
         run: |
-          dotnet pack Bank/Bank.WebApi/Bank.WebApi.csproj \
+          dotnet pack Bank/Bank.Domain/Bank.Domain.csproj \
             --configuration Release \
             --no-build \
             --output ./packages \
-            -p:PackageId=Bank.WebApi.U1Lab01 \
+            -p:PackageId=Bank.Domain.U1Lab01 \
             -p:PackageVersion=1.0.${{ github.run_number }} \
             -p:RepositoryUrl=https://github.com/${{ github.repository }} \
             -p:RepositoryType=git \
