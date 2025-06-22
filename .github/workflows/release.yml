@@ -44,7 +44,6 @@ jobs:
         run: |
           dotnet pack Bank/Bank.Domain/Bank.Domain.csproj \
             --configuration Release \
-            --no-build \
             --output ./packages \
             -p:PackageId=Bank.Domain.U1Lab01 \
             -p:PackageVersion=1.0.${{ github.run_number }} \
